@@ -17,7 +17,7 @@ public class HomeController {
 	
 	@Autowired UserService userService; // 의존성 주입(Dependency Injection) : 
 	
-	@GetMapping("/initdb") 
+	@GetMapping("/initdb") // 이걸 실행하고 싶으면 localhost:8090/initdb로 치면 확인 가능
 	public String initialize() {
 		for(int i = 1;i <= 10; i++)
 			userService.saveUser(new User("u" + i, "p" + i, "name" + i, "contact" + i));	

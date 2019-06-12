@@ -24,7 +24,7 @@ public class QuestionEntity {
 	
 	private String title; 
 	
-	@ManyToOne
+	@ManyToOne  // 한사람이 여러개의 엔티티를 가질 수 있다.????
 	@JoinColumn(name="fk_question_writer")
 	private UserEntity writer;	
 
